@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+   <head>
+   <title>Login Page</title>
+   <meta charset="utf-8">
+   <script>
+
+   window.onload=funtion(){
+   document.getElementById("login").onclick=function(){
+      var idtext=document.getElementById("idtext").value;
+      var pwtext=document.getElementById("pwtext").value;
+      var input = '{"id":'+idtext+',"pw":'+pwtext+'}';
+      window.location.href="/login?information="+input;
+      };
+   };   
+   </script>
+   </head>   
+   <body>
+   <label> ID : </label>
+   <input id="idtext" name="idtext" type="text"> <br>
+   <label> PW : </label>
+   <input id="pwtext" name="pwtext" type="password"> <br>
+   <input id="login" type="button" value="login">
+   </body>
+</html>
